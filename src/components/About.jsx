@@ -1,0 +1,81 @@
+import React, { useEffect, useRef } from 'react';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
+gsap.registerPlugin(ScrollTrigger);
+
+export default function About() {
+  const sectionRef = useRef(null);
+
+  useEffect(() => {
+    // Delay GSAP initialization slightly so the browser can paint the window.scrollTo(0,0) from Navbar first
+    const timer = setTimeout(() => {
+      let ctx = gsap.context(() => {
+        // Text reveal works everywhere
+        gsap.from('.about-text-line', {
+          scrollTrigger: {
+            trigger: '.about-content',
+            start: 'top 80%',
+            toggleActions: 'play none none none'
+          },
+          y: 60,
+          opacity: 0,
+          duration: 1.2,
+          stagger: 0.1,
+          ease: 'power3.out'
+        });
+        
+      }, sectionRef);
+      return () => ctx.revert();
+    }, 100);
+
+    return () => clearTimeout(timer);
+  }, []);
+
+  return (
+    <section id="about" ref={sectionRef} className="relative bg-background z-20 overflow-hidden">
+      
+      <div className="max-w-[1400px] mx-auto flex flex-col lg:flex-row w-full">
+        
+        {/* Header Left Side (Native CSS Sticky on Desktop) */}
+        <div className="w-full lg:w-5/12 relative">
+          <div className="lg:sticky lg:top-0 lg:h-screen flex flex-col justify-center px-6 md:px-16 pt-32 lg:pt-0 z-10 pointer-events-none">
+            <h2 className="font-sans font-bold text-5xl md:text-7xl lg:text-7xl text-dark tracking-tighter">
+              System <br/>
+              <span className="text-accent font-drama italic font-normal tracking-wide lowercase">Architecture.</span>
+            </h2>
+            <div className="w-16 h-[2px] bg-dark mt-8" />
+            <span className="font-mono text-xs uppercase tracking-widest text-dark/40 mt-6 block">
+              01 // About
+            </span>
+          </div>
+        </div>
+
+        {/* Scrolling Content Right Side */}
+        <div className="w-full lg:w-7/12 flex flex-col justify-center px-6 md:px-16 lg:px-24 pb-32 pt-16 lg:pt-[30vh] lg:pb-[30vh]">
+          <div className="about-content max-w-2xl relative">
+            
+            <div className="absolute -left-8 lg:-left-12 top-2 h-full w-[1px] bg-dark/10 hidden md:block">
+              <div className="w-2 h-2 rounded-full bg-accent absolute -left-[3px] top-0 shadow-[0_0_10px_#7B61FF]" />
+            </div>
+
+            <p className="about-text-line font-sans text-xl md:text-3xl text-dark font-medium leading-[1.6] tracking-tight mb-8">
+              I am a detail-oriented Software Developer operating at the intersection of precision and aesthetics.
+            </p>
+
+            <p className="about-text-line font-sans text-lg md:text-xl text-dark/70 leading-[1.7] mb-8">
+              With a strictly defined foundation in frontend development — <span className="text-dark font-mono font-semibold text-sm bg-dark/5 px-2 py-1 rounded">HTML</span> <span className="text-dark font-mono font-semibold text-sm bg-dark/5 px-2 py-1 rounded">CSS</span> <span className="text-dark font-mono font-semibold text-sm bg-dark/5 px-2 py-1 rounded">JS</span> <span className="text-dark font-mono font-semibold text-sm bg-dark/5 px-2 py-1 rounded">React</span> <span className="text-dark font-mono font-semibold text-sm bg-dark/5 px-2 py-1 rounded">TS</span> — and hands-on experience hardening open-source ecosystems.
+            </p>
+
+            <p className="about-text-line font-sans text-lg md:text-xl text-dark/70 leading-[1.7]">
+              I specialize in identifying structural bugs, enforcing rigorous data quality, documenting critical issues, and synchronizing with distributed teams to drastically improve overall software reliability and interface scalability.
+            </p>
+
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+  );
+}
