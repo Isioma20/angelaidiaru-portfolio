@@ -85,9 +85,6 @@ export default function Skills() {
                 
                 <div className="relative z-10 flex flex-col min-w-0 pr-2">
                   <span className="font-sans font-bold text-background tracking-tight leading-tight break-words">{skill.name}</span>
-                  <span className="font-mono text-[10px] text-background/40 uppercase tracking-widest mt-2">
-                    {skill.level}
-                  </span>
                 </div>
               </div>
             );

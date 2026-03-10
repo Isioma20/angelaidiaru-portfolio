@@ -120,9 +120,9 @@ export default function Hero() {
         y: 40,
         opacity: 0,
         duration: 1.2,
-        stagger: 0.08,
+        stagger: 0.15,
         ease: 'power3.out',
-        delay: 0.2
+        delay: 0.8 // Wait for site load
       });
     }, containerRef);
     
@@ -134,7 +134,7 @@ export default function Hero() {
   }, []);
 
   return (
-    <section ref={containerRef} className="relative w-full h-[100dvh] flex items-end pb-24 px-6 md:px-16 overflow-hidden bg-primary cursor-crosshair">
+    <section ref={containerRef} className="relative w-full h-[100dvh] flex items-center justify-center pb-24 px-6 md:px-16 overflow-hidden bg-primary cursor-crosshair">
       {/* HTML5 Canvas Background */}
       <canvas 
         ref={canvasRef} 
@@ -145,8 +145,8 @@ export default function Hero() {
       <div className="absolute inset-0 z-10 bg-gradient-to-t from-primary via-primary/50 to-primary/10 pointer-events-none" />
       
       {/* Content */}
-      <div className="relative z-20 max-w-5xl text-background pointer-events-none">
-        <h1 className="flex flex-col gap-0 md:-ml-2">
+      <div className="relative z-20 max-w-5xl text-background pointer-events-none flex flex-col items-center text-center mt-16">
+        <h1 className="flex flex-col gap-0">
           <span className="hero-element font-sans font-bold text-4xl md:text-6xl tracking-tight text-background/90">
             Frontend beyond
           </span>
@@ -155,7 +155,8 @@ export default function Hero() {
           </span>
         </h1>
         <p className="hero-element mt-10 max-w-md font-mono text-sm md:text-sm text-background/60 leading-relaxed uppercase tracking-widest">
-          Idiaru Angela // Frontend Developer with an eye for detail. Passionate about creating and solving.
+          <span className="font-bold text-accent text-base md:text-xl block mb-2">Idiaru Angela</span>
+          <span>// Frontend Developer with an eye for detail. Passionate about creating and solving.</span>
         </p>
         <div className="hero-element mt-12 pointer-events-auto w-max">
           <button className="btn-magnetic btn-fill-hover btn-accent-to-primary px-8 py-4 rounded-3rem font-sans font-medium text-sm tracking-wide flex items-center gap-3 transition-colors duration-500 shadow-[0_0_30px_rgba(123,97,255,0.2)]">

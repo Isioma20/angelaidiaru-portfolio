@@ -41,8 +41,8 @@ export default function About() {
         <div className="w-full lg:w-5/12 relative">
           <div className="lg:sticky lg:top-0 lg:h-screen flex flex-col justify-center px-6 md:px-16 pt-32 lg:pt-0 z-10 pointer-events-none">
             <h2 className="font-sans font-bold text-5xl md:text-7xl lg:text-7xl text-dark tracking-tighter">
-              System <br/>
-              <span className="text-accent font-drama italic font-normal tracking-wide lowercase">Architecture.</span>
+              Technical<br/>
+              <span className="text-accent font-drama italic font-normal tracking-wide lowercase">Profile</span>
             </h2>
             <div className="w-16 h-[2px] bg-dark mt-8" />
             <span className="font-mono text-xs uppercase tracking-widest text-dark/40 mt-6 block">
@@ -60,15 +60,15 @@ export default function About() {
             </div>
 
             <p className="about-text-line font-sans text-xl md:text-3xl text-dark font-medium leading-[1.6] tracking-tight mb-8">
-              I am a detail-oriented Software Developer operating at the intersection of precision and aesthetics.
+              I am a frontend developer focused on building clear, maintainable web interfaces.
             </p>
 
             <p className="about-text-line font-sans text-lg md:text-xl text-dark/70 leading-[1.7] mb-8">
-              With a strictly defined foundation in frontend development — <span className="text-dark font-mono font-semibold text-sm bg-dark/5 px-2 py-1 rounded">HTML</span> <span className="text-dark font-mono font-semibold text-sm bg-dark/5 px-2 py-1 rounded">CSS</span> <span className="text-dark font-mono font-semibold text-sm bg-dark/5 px-2 py-1 rounded">JS</span> <span className="text-dark font-mono font-semibold text-sm bg-dark/5 px-2 py-1 rounded">React</span> <span className="text-dark font-mono font-semibold text-sm bg-dark/5 px-2 py-1 rounded">TS</span> — and hands-on experience hardening open-source ecosystems.
+              Working primarily with <span className="text-dark font-mono font-semibold text-sm bg-dark/5 px-2 py-1 rounded">HTML</span>, <span className="text-dark font-mono font-semibold text-sm bg-dark/5 px-2 py-1 rounded">CSS</span>, <span className="text-dark font-mono font-semibold text-sm bg-dark/5 px-2 py-1 rounded">JavaScript</span>, <span className="text-dark font-mono font-semibold text-sm bg-dark/5 px-2 py-1 rounded">React</span>, and <span className="text-dark font-mono font-semibold text-sm bg-dark/5 px-2 py-1 rounded">TypeScript</span>, I develop responsive applications that emphasise structure, usability, and thoughtful implementation.
             </p>
 
             <p className="about-text-line font-sans text-lg md:text-xl text-dark/70 leading-[1.7]">
-              I specialize in identifying structural bugs, enforcing rigorous data quality, documenting critical issues, and synchronizing with distributed teams to drastically improve overall software reliability and interface scalability.
+              I also contribute to open-source projects, collaborating with distributed teams to build tools and improve shared software ecosystems.
             </p>
 
           </div>

@@ -54,18 +54,10 @@ export default function Navbar() {
     <>
       <nav
         ref={navRef}
-        className={`fixed top-6 left-1/2 -translate-x-1/2 z-50 flex items-center justify-between px-6 py-4 transition-all duration-500 rounded-3rem w-[92%] max-w-5xl ${
-          bgActive
-            ? 'bg-background/80 backdrop-blur-xl border border-primary/10 text-primary shadow-2xl'
-            : 'bg-transparent text-background border-transparent'
-        }`}
+        className={`fixed top-6 left-1/2 -translate-x-1/2 z-50 flex items-center justify-center gap-12 px-2 py-2 transition-all duration-500 rounded-full w-auto bg-background/40 backdrop-blur-2xl border border-primary/10 text-primary shadow-2xl`}
       >
-        <div className="font-sans font-bold text-xl tracking-tighter">
-          Idiaru.
-        </div>
-        
         {/* Desktop Links */}
-        <div className="hidden md:flex items-center gap-8 font-mono text-xs uppercase tracking-widest">
+        <div className="hidden md:flex items-center gap-8 pl-8 font-mono text-xs uppercase tracking-widest">
           {navLinks.map((link) => {
             const isActive = activeSection === link.toLowerCase();
             return (
@@ -84,7 +76,7 @@ export default function Navbar() {
         {/* Desktop CTA */}
         <button 
           onClick={(e) => handleNavClick(e, 'contact')}
-          className={`hidden md:block btn-magnetic btn-fill-hover px-6 py-2.5 rounded-2rem font-sans font-semibold text-sm cursor-pointer ${
+          className={`hidden md:block btn-magnetic btn-fill-hover px-6 py-2.5 rounded-full font-sans font-semibold text-sm cursor-pointer ${
             isScrolled ? 'btn-accent-to-primary' : 'btn-primary-to-accent'
           }`}
         >
@@ -105,7 +97,7 @@ export default function Navbar() {
           ].map((transformClass, i) => (
             <span 
               key={i} 
-              className={`w-6 h-[2px] rounded-full transition-all duration-300 ${bgActive ? 'bg-primary' : 'bg-background'} ${transformClass}`} 
+              className={`w-6 h-[2px] rounded-full transition-all duration-300 bg-primary ${transformClass}`} 
             />
           ))}
         </button>
