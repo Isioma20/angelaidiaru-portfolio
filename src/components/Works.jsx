@@ -18,7 +18,7 @@ const ImageSlideshow = ({ images }) => {
     if (!images || images.length <= 1) return;
     const timer = setInterval(() => {
       setCurrentIndex(prev => (prev + 1) % images.length);
-    }, 2000); // Switch every 2 seconds
+    }, 2000); 
     return () => clearInterval(timer);
   }, [images]);
 
@@ -40,7 +40,6 @@ const ImageSlideshow = ({ images }) => {
 export default function Works() {
   const [projects, setProjects] = useState([]);
   const containerRef = useRef(null);
-  const carouselRef = useRef(null);
   const cardsRef = useRef([]);
 
   useEffect(() => {
@@ -62,7 +61,7 @@ export default function Works() {
           if (banner) {
             banner.website = 'https://wikibanner.vercel.app';
             banner.url = 'https://wikibanner.vercel.app';
-            banner.name = 'Banner Project'; // Normalize naming
+            banner.name = 'Banner Project';
             banner.images = ['/images/optimized/Banner.webp'];
             banner.languages = ['JavaScript', 'CSS', 'HTML', 'User-Centred Interface Design'];
           }
@@ -87,7 +86,6 @@ export default function Works() {
 
           const finalProjects = [greenseal];
           if (reactJobs) finalProjects.push(reactJobs);
-          // Swapped Order: Admin Dashboard is now 3rd, Banner is 4th.
           if (adminDash) finalProjects.push(adminDash);
           if (banner) finalProjects.push(banner);
 
@@ -106,7 +104,6 @@ export default function Works() {
       cardsRef.current.forEach((card, i) => {
         if (!card) return;
         
-        // 1. Give the physical card a vertical pop and fade
         gsap.from(card.querySelector('.card-inner'), {
           opacity: 0,
           y: 80,
@@ -119,7 +116,6 @@ export default function Works() {
           }
         });
         
-        // 2. Add staggered bouncy reveals to the text inside the card vertically
         const textElements = card.querySelectorAll('.card-content-reveal');
         gsap.fromTo(textElements, 
           {
@@ -131,7 +127,7 @@ export default function Works() {
             opacity: 1,
             duration: 0.9,
             stagger: 0.1,
-            ease: 'back.out(2)', // Vertical bounce bounce settling
+            ease: 'back.out(2)',
             scrollTrigger: {
               trigger: card,
               start: 'top 75%',
@@ -164,7 +160,6 @@ export default function Works() {
         </div>
       </div>
       
-      {/* Vertical Cards Container */}
       <div 
         className="flex flex-col w-full max-w-7xl mx-auto gap-16 md:gap-32 px-6 md:px-16 pb-12 pt-4"
       >
@@ -176,16 +171,12 @@ export default function Works() {
           >
             <div className="card-inner w-full h-[65vh] md:h-[75vh] bg-primary rounded-[2.5rem] md:rounded-[3rem] shadow-2xl relative group overflow-hidden border border-background/10">
               
-              {/* Background Image Slideshow Layer */}
               <ImageSlideshow images={project.images} />
 
-              {/* Bottom half text overlay constraint with readable gradient - Fades out on hover after 1s delay */}
               <div className="absolute bottom-0 left-0 w-full h-full flex flex-col justify-end p-8 md:p-12 z-10 pointer-events-none transition-opacity duration-700 ease-in-out group-hover:opacity-0 delay-0 group-hover:delay-1000">
                 
-                {/* Fade-to-black backing for text legibility against colorful images */}
                 <div className="absolute bottom-0 left-0 w-full h-[75%] bg-gradient-to-t from-[#050505] via-[#050505]/95 to-transparent z-[-1]" />
                 
-                {/* Text Content - Added pb-20 to clear the absolute positioned tags/button below */}
                 <div className="relative pointer-events-auto flex flex-col justify-end pb-24 md:pb-28">
                   <div className="card-content-reveal font-mono text-sm md:text-lg text-accent mb-4 font-bold tracking-widest bg-accent/10 w-min px-4 py-1 rounded-full border border-accent/20">
                     0{idx + 1}.
@@ -201,7 +192,6 @@ export default function Works() {
                 </div>
               </div>
               
-              {/* Isolated Persistent Button and Tags - Always Visible */}
               <div className="absolute bottom-0 left-0 w-full p-8 md:p-12 flex items-center justify-between z-20 pointer-events-auto">
                  {project.languages && project.languages.length > 0 ? (
                     <div className="card-content-reveal flex flex-wrap items-center gap-2">

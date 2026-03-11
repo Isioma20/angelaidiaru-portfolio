@@ -8,10 +8,8 @@ export default function About() {
   const sectionRef = useRef(null);
 
   useEffect(() => {
-    // Delay GSAP initialization slightly so the browser can paint the window.scrollTo(0,0) from Navbar first
     const timer = setTimeout(() => {
       let ctx = gsap.context(() => {
-        // Text reveal works everywhere
         gsap.from('.about-text-line', {
           scrollTrigger: {
             trigger: '.about-content',
@@ -37,7 +35,6 @@ export default function About() {
       
       <div className="max-w-[1400px] mx-auto flex flex-col lg:flex-row w-full">
         
-        {/* Header Left Side (Native CSS Sticky on Desktop) */}
         <div className="w-full lg:w-5/12 relative">
           <div className="lg:sticky lg:top-0 lg:h-screen flex flex-col justify-center px-6 md:px-16 pt-32 lg:pt-0 z-10 pointer-events-none">
             <h2 className="font-sans font-bold text-5xl md:text-7xl lg:text-7xl text-dark tracking-tighter">
@@ -51,7 +48,6 @@ export default function About() {
           </div>
         </div>
 
-        {/* Scrolling Content Right Side */}
         <div className="w-full lg:w-7/12 flex flex-col justify-center px-6 md:px-16 lg:px-24 pb-32 pt-16 lg:pt-[30vh] lg:pb-[30vh]">
           <div className="about-content max-w-2xl relative">
             

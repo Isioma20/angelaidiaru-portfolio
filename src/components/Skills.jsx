@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useRef } from 'react';
+import React, { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { ShieldAlert, Fingerprint, Database, CheckCircle2, FileText, Blocks, LayoutTemplate, Bug, FlaskConical, Braces } from 'lucide-react';

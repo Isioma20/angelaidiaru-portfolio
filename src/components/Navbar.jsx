@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 const navLinks = ['About', 'Skills', 'Works'];
 
@@ -6,7 +6,6 @@ export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState('');
-  const navRef = useRef(null);
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -53,7 +52,6 @@ export default function Navbar() {
   return (
     <>
       <nav
-        ref={navRef}
         className={`fixed top-6 left-1/2 -translate-x-1/2 z-50 flex items-center justify-center gap-12 px-2 py-2 transition-all duration-500 rounded-full w-auto bg-background/40 backdrop-blur-2xl border border-primary/10 text-primary shadow-2xl`}
       >
         {/* Desktop Links */}

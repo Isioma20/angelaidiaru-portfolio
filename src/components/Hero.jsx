@@ -6,9 +6,6 @@ export default function Hero() {
   const canvasRef = useRef(null);
 
   useEffect(() => {
-    // -----------------------------------------
-    // Canvas Lattice Effect
-    // -----------------------------------------
     const canvas = canvasRef.current;
     if (!canvas) return;
     const ctxCanvas = canvas.getContext('2d');
@@ -19,9 +16,8 @@ export default function Hero() {
     canvas.height = height;
 
     let particles = [];
-    const particleCount = Math.floor(width * height / 12000); // Density
+    const particleCount = Math.floor(width * height / 12000);
     
-    // Mouse tracking for lattice
     let mouse = { x: -1000, y: -1000, radius: 180 };
 
     const handleMouseMove = (e) => {
@@ -48,7 +44,6 @@ export default function Hero() {
       draw() {
         ctxCanvas.beginPath();
         ctxCanvas.arc(this.x, this.y, this.size, 0, Math.PI * 2);
-        // Deep purple plasma color
         ctxCanvas.fillStyle = '#7B61FF';
         ctxCanvas.fill();
       }
@@ -135,16 +130,13 @@ export default function Hero() {
 
   return (
     <section ref={containerRef} className="relative w-full h-[100dvh] flex items-center justify-center pb-24 px-6 md:px-16 overflow-hidden bg-primary cursor-crosshair">
-      {/* HTML5 Canvas Background */}
       <canvas 
         ref={canvasRef} 
         className="absolute inset-0 z-0 bg-transparent block"
       />
       
-      {/* Heavy primary-to-black gradient overlay to blend perfectly into next section */}
       <div className="absolute inset-0 z-10 bg-gradient-to-t from-primary via-primary/50 to-primary/10 pointer-events-none" />
       
-      {/* Content */}
       <div className="relative z-20 max-w-5xl text-background pointer-events-none flex flex-col items-center text-center mt-16">
         <h1 className="flex flex-col gap-0">
           <span className="hero-element font-sans font-bold text-4xl md:text-6xl tracking-tight text-background/90">
