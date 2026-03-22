@@ -20,7 +20,7 @@ export default function Footer() {
         </div>
 
         <a href="mailto:idiaruangela2000@gmail.com" className="btn-magnetic group bg-accent text-background w-32 h-32 rounded-full font-sans font-semibold text-lg shrink-0 relative overflow-hidden block">
-          <div className="absolute inset-0 w-full h-full flex flex-col transition-transform duration-150 ease-out group-hover:-translate-y-full">
+          <div className="absolute inset-0 w-full h-full flex flex-col transition-transform duration-150 ease-out lg:group-hover:-translate-y-full">
             {/* Default State */}
             <div className="w-full h-full flex items-center justify-center gap-2 shrink-0">
               Email

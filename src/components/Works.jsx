@@ -177,11 +177,7 @@ export default function Works() {
                 
                 <div className="absolute bottom-0 left-0 w-full h-[75%] bg-gradient-to-t from-[#050505] via-[#050505]/95 to-transparent z-[-1]" />
                 
-                <div className="relative pointer-events-auto flex flex-col justify-end pb-24 md:pb-28">
-                  <div className="card-content-reveal font-mono text-sm md:text-lg text-accent mb-4 font-bold tracking-widest bg-accent/10 w-min px-4 py-1 rounded-full border border-accent/20">
-                    0{idx + 1}.
-                  </div>
-                  
+                <div className="relative pointer-events-auto flex flex-col justify-end pb-40 md:pb-28">
                   <h3 className="card-content-reveal font-sans font-bold text-3xl md:text-5xl text-background mb-4 tracking-tighter">
                     {project.name}
                   </h3>
@@ -192,7 +188,7 @@ export default function Works() {
                 </div>
               </div>
               
-              <div className="absolute bottom-0 left-0 w-full p-8 md:p-12 flex items-center justify-between z-20 pointer-events-auto">
+              <div className="absolute bottom-0 left-0 w-full p-6 md:p-12 flex flex-col items-start md:flex-row md:items-center justify-between gap-6 md:gap-4 z-20 pointer-events-auto">
                  {project.languages && project.languages.length > 0 ? (
                     <div className="card-content-reveal flex flex-wrap items-center gap-2">
                       {project.languages.map((lang, lIdx) => (

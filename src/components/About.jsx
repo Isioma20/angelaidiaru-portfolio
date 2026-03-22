@@ -60,7 +60,7 @@ export default function About() {
             </p>
 
             <p className="about-text-line font-sans text-lg md:text-xl text-dark/70 leading-[1.7] mb-8">
-              Working primarily with <span className="text-dark font-mono font-semibold text-sm bg-dark/5 px-2 py-1 rounded">HTML</span>, <span className="text-dark font-mono font-semibold text-sm bg-dark/5 px-2 py-1 rounded">CSS</span>, <span className="text-dark font-mono font-semibold text-sm bg-dark/5 px-2 py-1 rounded">JavaScript</span>, <span className="text-dark font-mono font-semibold text-sm bg-dark/5 px-2 py-1 rounded">React</span>, and <span className="text-dark font-mono font-semibold text-sm bg-dark/5 px-2 py-1 rounded">TypeScript</span>, I develop responsive applications that emphasise structure, usability, and thoughtful implementation.
+              Working primarily with <span className="text-dark font-mono font-semibold text-sm bg-dark/5 px-2 py-1 rounded">React</span>, and <span className="text-dark font-mono font-semibold text-sm bg-dark/5 px-2 py-1 rounded">TypeScript</span>, I develop responsive applications that emphasise structure, usability, and thoughtful implementation.
             </p>
 
             <p className="about-text-line font-sans text-lg md:text-xl text-dark/70 leading-[1.7]">

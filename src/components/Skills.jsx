@@ -7,16 +7,16 @@ gsap.registerPlugin(ScrollTrigger);
 
 // Hardcoded skills requested by user
 const hardcodedSkills = [
+  { name: 'Typescript', level: 'Expert', icon: Braces },
+  { name: 'Javascript', level: 'Expert', icon: Braces },
   { name: 'React', level: 'Advanced', icon: Blocks },
   { name: 'HTML', level: 'Expert', icon: LayoutTemplate },
   { name: 'Tailwind CSS', level: 'Expert', icon: LayoutTemplate },
-  { name: 'Javascript', level: 'Expert', icon: Braces },
-  { name: 'Typescript', level: 'Expert', icon: Braces },
-  { name: 'Manual Quality Assurance', level: 'Advanced', icon: ShieldAlert },
-  { name: 'Bug Identification & Documentation', level: 'Proficient', icon: Bug },
-  { name: 'UI Testing', level: 'Expert', icon: FlaskConical },
   { name: 'Data Validation', level: 'Expert', icon: Database },
+  { name: 'UI Testing', level: 'Expert', icon: FlaskConical },
+  { name: 'Bug Identification & Documentation', level: 'Proficient', icon: Bug },
   { name: 'Dataset Review and Verification', level: 'Expert', icon: CheckCircle2 },
+  { name: 'Manual Quality Assurance', level: 'Advanced', icon: ShieldAlert },
   { name: 'Technical Documentation', level: 'Advanced', icon: FileText }
 ];
 
