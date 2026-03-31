@@ -6,9 +6,9 @@ gsap.registerPlugin(ScrollTrigger);
 
 const defaultProjects = [
   { name: 'Greenseal pharmaceuticals', summary: 'Pharmaceutical brand website featuring product listings and a streamlined checkout experience.', website: 'https://www.greensealhealthcare.com/', url: 'https://www.greensealhealthcare.com/', primaryLanguage: 'TypeScript', languages: ['TypeScript', 'React', 'Static Site Generation', 'Responsive Web Design'], images: ['/images/optimized/Greenseal.webp', '/images/optimized/Greenseal-2.webp', '/images/optimized/Greenseal-3.webp'] },
-  { name: 'React Jobs Website', summary: 'Platform for finding and posting React role opportunities.', website: 'https://react-jobs-virid-iota.vercel.app', url: 'https://react-jobs-virid-iota.vercel.app', primaryLanguage: 'JavaScript', languages: ['JavaScript', 'HTML', 'CSS', 'Client-Side Rendering'], images: ['/images/optimized/Jobsearch.webp', '/images/optimized/Jobsearch-2.webp'] },
-  { name: 'Admin Dashboard UI', summary: 'A responsive admin dashboard UI with toggle-able light and dark modes', website: 'https://admin-dashboard-ui-jet.vercel.app', url: 'https://admin-dashboard-ui-jet.vercel.app', primaryLanguage: 'JavaScript', languages: ['JavaScript', 'CSS', 'HTML', 'Interactive User Interfaces', 'Structured Layout Design'], images: ['/images/optimized/Dashboard.webp', '/images/optimized/Dashboard-2.webp'] },
-  { name: 'Banner Project', summary: 'Built and tested a prototype tool for configurable MediaWiki CentralNotice banners.', website: 'https://wikibanner.vercel.app', url: 'https://wikibanner.vercel.app', primaryLanguage: 'JavaScript', languages: ['JavaScript', 'CSS', 'HTML', 'User-Centred Interface Design'], images: ['/images/optimized/Banner.webp'] }
+  { name: 'JobTracker', summary: 'A fast, interactive React application designed for creating, tracking, and maintaining a database of job listings.', website: 'https://react-jobs-virid-iota.vercel.app', url: 'https://react-jobs-virid-iota.vercel.app', primaryLanguage: 'JavaScript', languages: ['JavaScript', 'HTML', 'CSS', 'Client-Side Rendering'], images: ['/images/optimized/Jobsearch.webp', '/images/optimized/Jobsearch-2.webp'] },
+  { name: 'Admin UI Kit', summary: 'A clean, data-driven control panel for monitoring analytics and managing workflows.', website: 'https://admin-dashboard-ui-jet.vercel.app', url: 'https://admin-dashboard-ui-jet.vercel.app', primaryLanguage: 'JavaScript', languages: ['JavaScript', 'CSS', 'HTML', 'Interactive User Interfaces', 'Structured Layout Design'], images: ['/images/optimized/Dashboard.webp', '/images/optimized/Dashboard-2.webp'] },
+  { name: 'Banner Generator', summary: 'A lightweight, browser-based design tool for generating and exporting customized marketing banners.', website: 'https://wikibanner.vercel.app', url: 'https://wikibanner.vercel.app', primaryLanguage: 'JavaScript', languages: ['JavaScript', 'CSS', 'HTML', 'User-Centred Interface Design'], images: ['/images/optimized/Banner.webp'] }
 ];
 
 const ImageSlideshow = ({ images }) => {
@@ -51,8 +51,10 @@ export default function Works() {
           
           const reactJobs = apiProjects.find(p => p.name === 'React Jobs Website');
           if (reactJobs) {
+            reactJobs.name = 'JobTracker';
             reactJobs.website = 'https://react-jobs-virid-iota.vercel.app';
             reactJobs.url = 'https://react-jobs-virid-iota.vercel.app';
+            reactJobs.summary = 'A fast, interactive React application designed for creating, tracking, and maintaining a database of job listings.';
             reactJobs.images = ['/images/optimized/Jobsearch.webp', '/images/optimized/Jobsearch-2.webp'];
             reactJobs.languages = ['JavaScript', 'HTML', 'CSS', 'Client-Side Rendering'];
           }
@@ -61,15 +63,18 @@ export default function Works() {
           if (banner) {
             banner.website = 'https://wikibanner.vercel.app';
             banner.url = 'https://wikibanner.vercel.app';
-            banner.name = 'Banner Project';
+            banner.name = 'Banner Generator';
+            banner.summary = 'A lightweight, browser-based design tool for generating and exporting customized marketing banners.';
             banner.images = ['/images/optimized/Banner.webp'];
             banner.languages = ['JavaScript', 'CSS', 'HTML', 'User-Centred Interface Design'];
           }
           
           const adminDash = apiProjects.find(p => p.name === 'Admin Dashboard UI');
           if (adminDash) {
+            adminDash.name = 'Admin UI Kit';
             adminDash.website = 'https://admin-dashboard-ui-jet.vercel.app';
             adminDash.url = 'https://admin-dashboard-ui-jet.vercel.app';
+            adminDash.summary = 'A clean, data-driven control panel for monitoring analytics and managing workflows.';
             adminDash.images = ['/images/optimized/Dashboard.webp', '/images/optimized/Dashboard-2.webp'];
             adminDash.languages = ['JavaScript', 'CSS', 'HTML', 'Interactive User Interfaces', 'Structured Layout Design'];
           }
