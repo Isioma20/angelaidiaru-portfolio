@@ -140,15 +140,15 @@ export default function Hero() {
       <div className="relative z-20 max-w-5xl text-background pointer-events-none flex flex-col items-center text-center mt-16">
         <h1 className="flex flex-col gap-0">
           <span className="hero-element font-sans font-bold text-4xl md:text-6xl tracking-tight text-background/90">
-            Frontend beyond
+            Build. Test.
           </span>
           <span className="hero-element font-drama italic text-[5.5rem] leading-[0.8] md:text-[12rem] text-accent pr-4 drop-shadow-2xl lowercase">
-            limits.
+            Perfect.
           </span>
         </h1>
         <p className="hero-element mt-10 max-w-md font-mono text-sm md:text-sm text-background/60 leading-relaxed uppercase tracking-widest">
           <span className="font-bold text-accent text-base md:text-xl block mb-2">Idiaru Angela</span>
-          <span>// Frontend Developer with an eye for detail. Passionate about creating and solving.</span>
+          <span>// I'm a tech professional who loves turning ideas into reality and solving the exact puzzles needed to make everything run smoothly.</span>
         </p>
         <div className="hero-element mt-12 pointer-events-auto w-max">
           <button className="btn-magnetic btn-fill-hover btn-accent-to-primary px-8 py-4 rounded-3rem font-sans font-medium text-sm tracking-wide flex items-center gap-3 transition-colors duration-500 shadow-[0_0_30px_rgba(123,97,255,0.2)]">
